@@ -1,0 +1,11 @@
+function toSnakeCase(text) {
+    return text
+        .toLowerCase()
+        .replace(/\s+/g, '_') // Replace spaces with underscores
+        .replace(/[^\w_]/g, '') // Remove non-word characters
+        .replace(/__+/g, '_'); // Replace multiple underscores with a single underscore
+}
+
+// Example usage:
+const exampleText = "Hello World! This is a Test.";
+console.log(toSnakeCase(exampleText)); // Output: hello_world_this_is_a_test
